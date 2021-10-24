@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class Sample {
     @Test
     public void demo() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Cerberus\\Downloads\\maven-selenium\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/var/jenkins_home/workspace/maven-selenium/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/");
         String baseTitle = driver.getTitle();
