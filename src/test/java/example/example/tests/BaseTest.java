@@ -65,10 +65,34 @@ public class BaseTest {
 	 */
 	@BeforeClass
 	protected void setup() {
+		//		System.setProperty("webdriver.chrome.driver", "/var/jenkins_home/workspace/maven-selenium/drivers/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Cerberus\\Downloads\\maven-selenium\\drivers\\chromedriver1.exe");
+//
+//		ChromeOptions chromeOptions = new ChromeOptions();
+//		chromeOptions.addArguments("--headless");
+//
+//		WebDriver driver;
+//		chromeOptions.addArguments("disable-infobars");
+//		driver = new ChromeDriver(chromeOptions);
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		WebDriverContext.setDriver(driver);
+
 //		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+
+
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Cerberus\\IdeaProjects\\selenium-testng-test\\drivers\\geckodriver.exe");
+//
+//		driver = new ChromeDriver();
+//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
+
+
+
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("disable-infobars");
+		ops.addArguments("--headless");
 		driver = new ChromeDriver(ops);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
